@@ -21,8 +21,7 @@ p {
     justify-content: center;
     height: min-content;
     background-color: #FAF8F2;
-    padding-top: 2vh;
-    padding-bottom: 4vh;
+    padding-bottom: 3vh;
 }
 
 #topbox {
@@ -30,7 +29,8 @@ p {
     border-radius: 10px;
     width: 75vw;
     height: min-content;
-    padding: 4vh 2vw;
+    margin-top: 2vh;
+    padding: 2vh 2vw;
 }
 
 #toprow {
@@ -70,113 +70,7 @@ a {
     text-decoration: none;
 }
 
-#lower {
-    margin-top: 2vh;
-    display: flex;
-    flex-direction: row;
-}
-
-#cards {
-    margin-left: auto;
-    display: flex;
-    flex-direction: row;
-    height: min-content;
-    align-items: center;
-    position: relative;
-    gap: 1vw;
-}
-
-.card {
-    background-color: #61cf70;
-    padding: .5vh .75vw;
-    border-radius: 10px;
-    height: 40vh;
-    width: 35vw;
-}
-
-.slideOut {
-    animation: slideOut .3s ease;
-}
-
-.slideIn {
-    animation: slideIn .3s ease;
-}
-
-@keyframes slideOut {
-    from {
-        transform: translateY(0) translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateY(-20px) translateX(10px);
-        opacity: .67;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(20px) translateX(-10px);
-        opacity: .67;
-    }
-
-    to {
-        transform: translateY(0) translateX(0);
-        opacity: 1;
-    }
-}
-
-#indicator {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    gap: .5vw;
-    transform: translateX(-50%);
-    left: 50%;
-    bottom: 2vh;
-}
-
-#indicator div {
-    width: 1vh;
-    height: 1vh;
-    background-color: #ffffff;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-}
-
-button {
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
-#prevCard, #nextCard {
-    transform-origin: center;
-    height: min-content;
-    font-size: calc(0.75vw + 40px);
-    transition: transform 0.3s ease;
-}
-
-#prevCard:hover, #nextCard:hover {
-    transform: scale(1.2);
-}
-
-#joincta {
-    background-color: #f8c423;
-    border-radius: 10px;
-    padding: .5vh .75vw;
-    transition-property: background-color, font-weight;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    border: 4px solid transparent;
-    font-size: calc(0.2vw + 17.5px);
-}
-
-#joincta:hover {
-    background-color: #ffbf00;
-    font-weight: bold;
-}
-
-#below {
+#content1 {
     padding-top: 6vh;
     padding-bottom: 6vh;
     padding-left: 12.5vw;
@@ -188,11 +82,53 @@ button {
     align-items: center;
 }
 
-#below div {
+#content1 div {
     width: 35.5vw;
 }
 
-#below img {
+#content1 img {
+    width: 35.5vw;
+    height: min-content;
+}
+
+#content2 {
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    padding-left: 12.5vw;
+    background-color: #FAF8F2;
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+    height: min-content;
+    align-items: center;
+}
+
+#content2 div {
+    width: 35.5vw;
+}
+
+#content2 img {
+    width: 35.5vw;
+    height: min-content;
+}
+
+#content3 {
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    padding-left: 12.5vw;
+    background-color: #F4F0E6;
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+    height: min-content;
+    align-items: center;
+}
+
+#content3 div {
+    width: 35.5vw;
+}
+
+#content3 img {
     width: 35.5vw;
     height: min-content;
 }

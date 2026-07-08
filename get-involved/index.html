@@ -3,42 +3,84 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>Home - Bloomington Streets Alliance</title>
+        <title>Get Involved - Bloomington Streets Alliance</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+        <link rel="manifest" href="../favicon/site.webmanifest">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="topbox-container">
             <div id="topbox">
                 <header id="toprow">
-                    <img src="../images/Bloomington Streets Alliance.png" alt="Text reading Bloomington Streets Alliance, with the Alliance's logo to the left featuring a gold bicycle on a crosswalk with a double chevron marking above, all on a green background.">
+                    <a href="../"><img src="../images/Bloomington Streets Alliance.png" alt="Text reading Bloomington Streets Alliance, with the Alliance's logo to the left featuring a gold bicycle on a crosswalk with a double chevron marking above, all on a green background."></a>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Resources</a></li>
-                        <li><a href="#">Get Involved</a></li>
+                        <li><a href="../about/">About</a></li>
+                        <li><a href="../resources/">Resources</a></li>
+                        <li><a href="../get-involved/">Get Involved</a></li>
                     </ul>
                 </header>
             </div>
         </div>
-        <div id="below">
-            <div>
-                <h1>What We Do</h1>
-                <p>The Bloomington Streets Alliance was founded by ordinary people who believe that walking, biking, and transit goes hand-in-hand with creating strong, thriving communities. Sustainable transportation improves health, brings people together, reinforces our small businesses, reduces our climate impact, and makes each day just a little more joyful.</p>
-                <p>We will achieve these goals through grassroots organization, sharing resources, combating misinformation, and letting the community know where their action can lead to real changes. We believe that all Bloomington residents can benefit from better mobility and land use — but none of this is possible without your support. Please join our movement for a brighter future.</p>
+        <div id="content1">
+            <h1>Action alerts</h1>
+            <p>Support our initiatves and make your support for better streets known!</p>
+            <div id="cardholder">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../images/Normandale Lake.png" alt="Placeholder image for Card 1">
+                    </div>
+                    <div class="card-text">
+                        <h3>Card 1</h3>
+                        <p class="dateline">July 7, 2026</p>
+                        <p>This is a simple card with some placeholder text.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../images/Normandale Lake.png" alt="Placeholder image for Card 2">
+                    </div>
+                    <div class="card-text">
+                        <h3>Card 2</h3>
+                        <p class="dateline">July 7, 2026</p>
+                        <p>This is another simple card with some placeholder text.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../images/Normandale Lake.png" alt="Placeholder image for Card 3">
+                    </div>
+                    <div class="card-text">
+                        <h3>Card 3</h3>
+                        <p class="dateline">July 7, 2026</p>
+                        <p>This is a third simple card with some placeholder text.</p>
+                    </div>
+                </div>
             </div>
-            <img src="images/Bloomington Central Station.png" alt="An urban park and light rail station in Bloomington, featuring an art installation in the foreground, office buildings in the background, and a light rail vehicle at the station.">
+        </div>
+        <div id="content2">
+            <div>
+                <h1>Sign up for our newsletter</h1>
+                <p>Fill out the box below to subscribe to our newsletter. We'll share updates on our initiatives and how to get involved.</p>
+                <form action="https://buttondown.com/api/emails/embed-subscribe/bloomingtonstreetsalliance" method="post" class="embeddable-buttondown-form">
+                    <input id="email" name="email"type="email" placeholder="Email address" required>
+                    <button id="submitform" type="submit">Submit</button>
+                </form>
+            </div>
+            <img src="../images/Normandale Lake.png" alt="An aerial view of Normandale Lake Park, with greenery and trails around a lake, all below a cloudy sky. Glassy office towers are visible in the background, with their reflections visible in the lake.">
         </div>
         <footer>
             <p>&#169; 2026 Bloomington Streets Alliance.</p>
             <div id="footerlinks">
-                <a href="#"><p>Home</p></a>
-                <a href="#"><p>About</p></a>
-                <a href="#"><p>Resources</p></a>
-                <a href="#"><p>Get Involved</p></a>
+                <a href="../"><p>Home</p></a>
+                <a href="../about/"><p>About</p></a>
+                <a href="../resources/"><p>Resources</p></a>
+                <a href="../get-involved/"><p>Get Involved</p></a>
             </div> 
             <div id="icons">
                 <a href="mailto:hello@bloomingtonstreetsalliance.org"><i class="fa-solid fa-envelope"></i></a>
