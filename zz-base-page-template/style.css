@@ -71,14 +71,15 @@ a {
 }
 
 #below {
-    padding-top: 4vh;
-    padding-bottom: 4vh;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
     padding-left: 12.5vw;
     background-color: #F4F0E6;
     display: flex;
     flex-direction: row;
     gap: 4vw;
     height: min-content;
+    align-items: center;
 }
 
 #below div {

@@ -65,6 +65,10 @@ p {
     border-bottom: 2px solid #f8c423;
 }
 
+#highlight a {
+    border-bottom: 2px solid #f8c423;
+}
+
 a {
     color: black;
     text-decoration: none;
