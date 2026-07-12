@@ -9,12 +9,12 @@ function updateCardDisplay() {
     cards[oldCard].classList.remove('slideOut');
     void cards[oldCard];
     cards[oldCard].classList.add('slideOut');
-    cards[oldCard].style.display = 'none';
+    cards[oldCard].parentElement.style.display = 'none';
 
     cards[activeCard].classList.remove('slideIn');
     void cards[activeCard];
     cards[activeCard].classList.add('slideIn');
-    cards[activeCard].style.display = 'block';
+    cards[activeCard].parentElement.style.display = 'block';
 
     indicators[oldCard].style.backgroundColor = '#ffffff';
     indicators[activeCard].style.backgroundColor = '#f8c423';
