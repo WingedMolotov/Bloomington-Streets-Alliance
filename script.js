@@ -21,9 +21,9 @@ function updateCardDisplay() {
 }
 
 for (let i = 0; i < cards.length; i++) {
-    cards[i].style.display = 'none';
+    cards[i].parentElement.style.display = 'none';
 }
-cards[activeCard].style.display = 'block';
+cards[activeCard].parentElement.style.display = 'block';
 indicators[oldCard].style.backgroundColor = '#ffffff';
 indicators[activeCard].style.backgroundColor = '#f8c423';
 
