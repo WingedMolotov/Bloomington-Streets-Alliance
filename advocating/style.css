@@ -128,44 +128,87 @@ summary {
     object-position: top;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding-left: 12.5vw;
-    padding-right: 12.5vw;
-    padding-top: 4vh;
-    padding-bottom: 6vh;
-    display: flex;
-    flex-direction: row;
+@media only screen and (min-width: 1417px) {
+    footer {
+        background-color: #333;
+        color: white;
+        padding-left: 12.5vw;
+        padding-right: 12.5vw;
+        padding-top: 4vh;
+        padding-bottom: 6vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    #icons {
+        margin-left: auto;
+        display: flex;
+        gap: 1vw;
+    }
+
+    #icons a {
+        color: white;
+        transition: color 0.3s ease;
+    }
+
+    #icons a:hover {
+        color: #f8c423;
+    }
+
+    #footerlinks {
+        display: flex;
+        transform: translateX(-50%);
+        left: 50%;
+        gap: 2vw;
+        position: absolute;
+    }
+
+    #footerlinks a {
+        color: white;
+    }
 }
 
-footer p {
-    margin: 0;
-}
+@media only screen and (max-width: 1416px) {
+    footer {
+        background-color: #333;
+        color: white;
+        padding-left: 12.5vw;
+        padding-right: 12.5vw;
+        padding-top: 4vh;
+        padding-bottom: 6vh;
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+    }
 
-#icons {
-    margin-left: auto;
-    display: flex;
-    gap: 1vw;
-}
+    footer p {
+        margin: 0;
+    }
 
-#icons a {
-    color: white;
-    transition: color 0.3s ease;
-}
+    #icons {
+        display: flex;
+        gap: 1vw;
+    }
 
-#icons a:hover {
-    color: #f8c423;
-}
+    #icons a {
+        color: white;
+        transition: color 0.3s ease;
+    }
 
-#footerlinks {
-    display: flex;
-    transform: translateX(-50%);
-    left: 50%;
-    gap: 2vw;
-    position: absolute;
-}
+    #icons a:hover {
+        color: #f8c423;
+    }
 
-#footerlinks a {
-    color: white;
+    #footerlinks {
+        display: flex;
+        gap: 2vw;
+    }
+
+    #footerlinks a {
+        color: white;
+    }
 }
