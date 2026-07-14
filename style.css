@@ -31,7 +31,7 @@ p {
         border-radius: 10px;
         width: 75vw;
         height: min-content;
-        padding: 4vh 2vw;
+        padding: max(4vh, 25px) max(2vw, 25px);
     }
 
     #toprow {
@@ -95,7 +95,7 @@ p {
         border-radius: 10px;
         width: 75vw;
         height: min-content;
-        padding: 4vh 2vw;
+        padding: max(4vh, 25px) max(2vw, 25px);
     }
 
     #toprow {
@@ -169,10 +169,48 @@ a {
     text-decoration: none;
 }
 
-#lower {
-    margin-top: 2vh;
-    display: flex;
-    flex-direction: row;
+@media only screen and (min-width: 760px) {
+    #lower {
+        margin-top: 2vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card {
+        height: 40vh;
+        min-height: 225px;
+        width: 32.5vw;
+        border-radius: 10px;
+        position: relative;
+        color: white;
+        overflow: hidden;
+        background-color: white;
+    }
+}
+
+@media only screen and (max-width: 759px) {
+    #lower {
+        margin-top: 2vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #joincta {
+        float: center;
+    }
+
+    .card {
+        height: 40vh;
+        min-height: 225px;
+        width: 100%;
+        border-radius: 10px;
+        position: relative;
+        color: white;
+        overflow: hidden;
+        background-color: white;
+        margin-top: max(3vh, 17px);
+    }
 }
 
 #cards {
@@ -183,17 +221,6 @@ a {
     align-items: center;
     position: relative;
     gap: 1vw;
-}
-
-.card {
-    height: 40vh;
-    min-height: 225px;
-    width: 32.5vw;
-    border-radius: 10px;
-    position: relative;
-    color: white;
-    overflow: hidden;
-    background-color: white;
 }
 
 .cards > a {
@@ -215,7 +242,7 @@ a {
 }
 
 .cardinner {
-    padding: 2.5vh 1vw;
+    padding: max(2.5vh, 17px) max(1vw, 17px);
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25));
     background-size: cover;
     background-position: center;
@@ -320,25 +347,37 @@ button {
     font-weight: bold;
 }
 
-#below {
-    padding-top: 6vh;
-    padding-bottom: 6vh;
-    padding-left: 12.5vw;
-    background-color: #F4F0E6;
-    display: flex;
-    flex-direction: row;
-    gap: 4vw;
-    height: min-content;
-    align-items: center;
+@media only screen and (min-width: 760px) {
+    #below {
+        padding-top: 6vh;
+        padding-bottom: 6vh;
+        padding-left: 12.5vw;
+        background-color: #F4F0E6;
+        display: flex;
+        flex-direction: row;
+        gap: 4vw;
+        height: min-content;
+        align-items: center;
+    }
+
+    #below div {
+        width: 35.5vw;
+    }
+
+    #below img {
+        width: 35.5vw;
+        height: min-content;
+    }
 }
 
-#below div {
-    width: 35.5vw;
-}
-
-#below img {
-    width: 35.5vw;
-    height: min-content;
+@media only screen and (max-width: 759px) {
+    #below {
+        padding: 6vh 12.5vw;
+        background-color: #F4F0E6;
+        display: flex;
+        flex-direction: column;
+        gap: 4vw;
+    }
 }
 
 @media only screen and (min-width: 1417px) {
