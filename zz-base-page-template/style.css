@@ -31,7 +31,7 @@ p {
         border-radius: 10px;
         width: 75vw;
         height: min-content;
-        padding: 4vh 2vw;
+        padding: max(4vh, 25px) max(2vw, 25px);
     }
 
     #toprow {
@@ -44,8 +44,11 @@ p {
         min-height: 100px;
     }
 
-    #toprow>div {
+    #toprow > div {
         margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
     }
 
     #toprow ul {
@@ -55,8 +58,8 @@ p {
         list-style: none;
         margin: 0;
         padding: 0;
+        margin-bottom: 2vh;
         margin-left: auto;
-        margin-top: 4%;
         font-weight: bold;
         height: min-content;
         font-size: calc(0.2vw + 20px);
@@ -95,7 +98,7 @@ p {
         border-radius: 10px;
         width: 75vw;
         height: min-content;
-        padding: 4vh 2vw;
+        padding: max(4vh, 25px) max(2vw, 25px);
     }
 
     #toprow {
@@ -103,7 +106,7 @@ p {
         flex-direction: row;
     }
 
-    #toprow>div {
+    #toprow > div {
         margin-left: auto;
     }
 
@@ -169,25 +172,37 @@ a {
     text-decoration: none;
 }
 
-#below {
-    padding-top: 6vh;
-    padding-bottom: 6vh;
-    padding-left: 12.5vw;
-    background-color: #F4F0E6;
-    display: flex;
-    flex-direction: row;
-    gap: 4vw;
-    height: min-content;
-    align-items: center;
+@media only screen and (min-width: 760px) {
+    #below {
+        padding-top: 6vh;
+        padding-bottom: 6vh;
+        padding-left: 12.5vw;
+        background-color: #F4F0E6;
+        display: flex;
+        flex-direction: row;
+        gap: 4vw;
+        height: min-content;
+        align-items: center;
+    }
+
+    #below div {
+        width: 35.5vw;
+    }
+
+    #below img {
+        width: 35.5vw;
+        height: min-content;
+    }
 }
 
-#below div {
-    width: 35.5vw;
-}
-
-#below img {
-    width: 35.5vw;
-    height: min-content;
+@media only screen and (max-width: 759px) {
+    #below {
+        padding: 6vh 12.5vw;
+        background-color: #F4F0E6;
+        display: flex;
+        flex-direction: column;
+        gap: 4vw;
+    }
 }
 
 @media only screen and (min-width: 1417px) {

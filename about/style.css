@@ -31,7 +31,7 @@ p {
         border-radius: 10px;
         width: 75vw;
         height: min-content;
-        padding: 4vh 2vw;
+        padding: max(4vh, 25px) max(2vw, 25px);
     }
 
     #toprow {
@@ -44,8 +44,11 @@ p {
         min-height: 100px;
     }
 
-    #toprow>div {
+    #toprow > div {
         margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
     }
 
     #toprow ul {
@@ -55,8 +58,8 @@ p {
         list-style: none;
         margin: 0;
         padding: 0;
+        margin-bottom: 2vh;
         margin-left: auto;
-        margin-top: 4%;
         font-weight: bold;
         height: min-content;
         font-size: calc(0.2vw + 20px);
@@ -99,7 +102,7 @@ p {
         border-radius: 10px;
         width: 75vw;
         height: min-content;
-        padding: 4vh 2vw;
+        padding: max(4vh, 25px) max(2vw, 25px);
     }
 
     #toprow {
@@ -107,7 +110,7 @@ p {
         flex-direction: row;
     }
 
-    #toprow>div {
+    #toprow > div {
         margin-left: auto;
     }
 

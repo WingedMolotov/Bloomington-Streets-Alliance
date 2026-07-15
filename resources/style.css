@@ -31,7 +31,7 @@ p {
         border-radius: 10px;
         width: 75vw;
         height: min-content;
-        padding: 4vh 2vw;
+        padding: max(4vh, 25px) max(2vw, 25px);
     }
 
     #toprow {
@@ -46,6 +46,9 @@ p {
 
     #toprow > div {
         margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
     }
 
     #toprow ul {
@@ -55,8 +58,8 @@ p {
         list-style: none;
         margin: 0;
         padding: 0;
+        margin-bottom: 2vh;
         margin-left: auto;
-        margin-top: 4%;
         font-weight: bold;
         height: min-content;
         font-size: calc(0.2vw + 20px);
@@ -99,7 +102,7 @@ p {
         border-radius: 10px;
         width: 75vw;
         height: min-content;
-        padding: 4vh 2vw;
+        padding: max(4vh, 25px) max(2vw, 25px);
     }
 
     #toprow {
@@ -182,10 +185,14 @@ a {
     padding-bottom: 6vh;
     padding-left: 12.5vw;
     background-color: #F4F0E6;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
 }
 
 #content1 h1 {
     margin: 0;
+    margin-right: 1vw;
 }
 
 #content1 a {
@@ -193,15 +200,55 @@ a {
     text-decoration: underline;
 }
 
-#listholder {
-    display: flex;
-    flex-direction: row;
-    gap: 4vw;
-    height: min-content;
+@media only screen and (min-width: 760px) {
+    #listholder {
+        display: flex;
+        flex-direction: row;
+        gap: 4vw;
+        height: min-content;
+    }
+
+    #listholder > div {
+        display: flex;
+        flex-direction: column;
+        width: calc(67vw/3);
+        gap: 2vh;
+    }
 }
 
-#listholder div {
-    width: calc(67vw/3);
+@media only screen and (max-width: 759px) {
+    #listholder {
+        display: flex;
+        flex-direction: column;
+        gap: max(2vh, 15px);
+        height: min-content;
+    }
+
+    #listholder > div {
+        display: flex;
+        flex-direction: column;
+        width: 75vw;
+        gap: max(2vh, 15px);
+    }
+}
+
+#listholder ul {
+    display: flex;
+    flex-direction: column;
+    gap: max(1vh, 10px);
+}
+
+#listholder h3, #listholder p, #listholder li, #listholder ul {
+    margin: 0;
+}
+
+#heading {
+    display: flex;
+    flex-direction: row;
+}
+
+#heading i {
+    font-size: calc(0.9vw + 25px);
 }
 
 #content2 {
@@ -218,15 +265,42 @@ a {
     margin-bottom: 0;
 }
 
-.layer {
-    display: flex;
-    flex-direction: row;
-    gap: 4vw;
-    align-items: center;
+@media only screen and (min-width: 760px) {
+    .layer {
+        display: flex;
+        flex-direction: row;
+        gap: 4vw;
+        align-items: center;
+    }
+
+    .layer > div {
+        width: 35.5vw;
+    }
+
+    #content2 img {
+        width: 35.5vw;
+        height: min-content;
+    }
 }
 
-.layer > div {
-    width: 35.5vw;
+@media only screen and (max-width: 759px) {
+    .layer {
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+        align-items: center;
+        margin-right: 12.5vw;
+    }
+
+    #walkexception {
+        margin-top: 0;
+    }
+
+    #content2 img {
+        width: 75vw;
+        height: min-content;
+        order: -1;
+    }
 }
 
 #content2 > div > div > div > ul > li > p {
@@ -234,33 +308,31 @@ a {
     margin-bottom: 1vh;
 }
 
-#content2 img {
-    width: 35.5vw;
-    height: min-content;
+#summary {
+    display: flex;
+    gap: .5vw;
+    flex-direction: row;
 }
 
-summary {
-    cursor: pointer;
-}
-
-details {
+#details {
     margin-bottom: 1vh;
 }
 
-details > summary > span {
+#details > #summary > span {
     text-decoration-line: underline;
     text-decoration-style: dotted;
     font-size: 90%;
     font-size: calc(0.9*(0.1vw + 15px));
 }
 
-details > p {
+#details > div > p {
     padding: 0;
     margin: 0;
+    margin-top: 1vh;
     font-size: calc(0.9*(0.1vw + 15px));
 }
 
-details a {
+#details a {
     font-weight: bold;
     text-decoration: underline;
 }

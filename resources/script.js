@@ -1,0 +1,2 @@
+toggleDetails(document.getElementById('resourcetoggle'), document.getElementById('resourcelistwrap'), true);
+toggleDetails(document.getElementById('bikingtoggle'), document.getElementById('bikingwrap'), false);
