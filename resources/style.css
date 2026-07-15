@@ -289,7 +289,7 @@ a {
         flex-direction: column;
         gap: 2vh;
         align-items: center;
-        margin-right: 12.5vw;
+        width: 75vw;
     }
 
     #walkexception {

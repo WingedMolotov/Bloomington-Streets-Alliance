@@ -180,31 +180,131 @@ a {
     text-decoration: none;
 }
 
-#below {
-    padding-top: 6vh;
-    padding-bottom: 6vh;
-    padding-left: 12.5vw;
-    background-color: #F4F0E6;
-    display: flex;
-    flex-direction: column;
-    gap: 4vw;
-    height: min-content;
+@media only screen and (min-width: 760px) {
+    #below {
+        padding-top: 6vh;
+        padding-bottom: 6vh;
+        padding-left: 12.5vw;
+        background-color: #F4F0E6;
+        display: flex;
+        flex-direction: column;
+        gap: 4vw;
+        height: min-content;
+    }
+
+    #below > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4vw;
+    }
+
+    #below > div > div:not(.exclude) {
+        width: 35.5vw;
+    }
+
+    #below img {
+        width: 35.5vw;
+        height: min-content;
+    }
+
+    #open > #textual {
+        width: 25.5vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    #open #imgcont {
+        width: 45.5vw;
+    }
+
+    #textual div {
+        background-color: #faeca0;
+        padding: 1vh 1vw;
+        border-radius: 10px;
+    }
+
+    #textual h3 {
+        margin: 0;
+    }
+
+    #open img {
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+        object-position: right bottom;
+    }
 }
 
-#below > div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 4vw;
+@media only screen and (max-width: 759px) {
+    #below {
+        padding-top: 6vh;
+        padding-bottom: 6vh;
+        padding-left: 12.5vw;
+        background-color: #F4F0E6;
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+        height: min-content;
+    }
+
+    #below > div {
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    #below > div > div:not(.exclude) {
+        width: 75vw;
+    }
+
+    #below img {
+        width: 75vw;
+        height: min-content;
+    }
+
+    #img102ndcont {
+        order: -1;
+    }
+
+    #open > #textual {
+        width: 75vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    #open #imgcont {
+        width: 75vw;
+    }
+
+    #textual div {
+        background-color: #faeca0;
+        padding: 1vh 1vw;
+        border-radius: 10px;
+    }
+
+    #textual h3 {
+        margin: 0;
+    }
+
+    #open img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        object-position: right bottom;
+    }
 }
 
-#below > div > div:not(.exclude) {
-    width: 35.5vw;
+.notopmargin {
+    margin-top: 0;
 }
 
-#below img {
-    width: 35.5vw;
-    height: min-content;
+.nobottommargin {
+    margin-bottom: 0;
 }
 
 #below a {
@@ -221,18 +321,19 @@ a {
 
 #infoviewcont {
     display: flex;
-    justify-content: center;
-    margin-right: 12.5vw;
+    width: 75vw;
+    border-radius: 15px;
+    overflow-x: auto;
+    background-color: #faeca0;
 }
 
 #infoview {
-    background-color: #faeca0;
-    padding: 2vh 2vw;
     display: flex;
+    padding: 2vh 2vw;
     flex-direction: row;
     align-items: center;
-    gap: 1vw;
-    border-radius: 15px;
+    gap: max(1vw, 15px);
+    width: max-content;
 }
 
 .infobub {
@@ -242,47 +343,19 @@ a {
     justify-content: center;
     background-color: #f8c423;
     border-radius: 50%;
-    padding: 1vh 1vh;
-    width: 9vw;
-    height: 9vw;
+    padding: max(2vh, 20px);
+    width: max(9vw, 150px);
+    aspect-ratio: 1/1;
     text-align: center;
+    flex-shrink: 0;
 }
 
-.infobub > h3, .infobub > p {
+.infobub h3, .infobub p {
     margin: 0;
 }
 
-.infobub > p {
+.infobub p {
     font-size: 95%;
-}
-
-#open > #textual {
-    width: 25.5vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 4vh;
-}
-
-#open #imgcont {
-    width: 45.5vw;
-}
-
-#textual div {
-    background-color: #faeca0;
-    padding: 1vh 1vw;
-    border-radius: 10px;
-}
-
-#textual h3 {
-    margin: 0;
-}
-
-#open img {
-    width: 100%;
-    height: 60vh;
-    object-fit: cover;
-    object-position: right bottom;
 }
 
 @media only screen and (min-width: 1417px) {
