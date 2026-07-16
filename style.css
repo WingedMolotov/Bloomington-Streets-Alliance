@@ -16,6 +16,10 @@ p {
     font-size: calc(0.1vw + 15px);
 }
 
+button {
+    color: black;
+}
+
 @media only screen and (min-width: 1094px) {
     #topbox-container {
         display: flex;
@@ -401,7 +405,7 @@ button {
     #icons {
         margin-left: auto;
         display: flex;
-        gap: 1vw;
+        gap: min(1vw, 10px);
     }
 
     #icons a {
@@ -426,7 +430,7 @@ button {
     }
 }
 
-@media only screen and (max-width: 1416px) {
+@media only screen and (max-width: 1416px) and (min-width: 517px) {
     footer {
         background-color: #333;
         color: white;
@@ -445,7 +449,7 @@ button {
 
     #icons {
         display: flex;
-        gap: 1vw;
+        gap: max(1vw, 10px);
     }
 
     #icons a {
@@ -460,6 +464,48 @@ button {
     #footerlinks {
         display: flex;
         gap: 2vw;
+    }
+
+    #footerlinks a {
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 516px) {
+    footer {
+        background-color: #333;
+        color: white;
+        padding-left: 12.5vw;
+        padding-right: 12.5vw;
+        padding-top: 4vh;
+        padding-bottom: 6vh;
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    #icons {
+        display: flex;
+        gap: max(1vw, 10px);
+    }
+
+    #icons a {
+        color: white;
+        transition: color 0.3s ease;
+    }
+
+    #icons a:hover {
+        color: #f8c423;
+    }
+
+    #footerlinks {
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
     }
 
     #footerlinks a {

@@ -17,6 +17,10 @@ p {
     font-size: calc(0.1vw + 15px);
 }
 
+button {
+    color: black;
+}
+
 input {
     font-family: "Public Sans", sans-serif;
     border: none;
@@ -432,7 +436,7 @@ a:has(.card) {
     #icons {
         margin-left: auto;
         display: flex;
-        gap: 1vw;
+        gap: min(1vw, 10px);
     }
 
     #icons a {
@@ -457,7 +461,7 @@ a:has(.card) {
     }
 }
 
-@media only screen and (max-width: 1416px) {
+@media only screen and (max-width: 1416px) and (min-width: 517px) {
     footer {
         background-color: #333;
         color: white;
@@ -476,7 +480,7 @@ a:has(.card) {
 
     #icons {
         display: flex;
-        gap: 1vw;
+        gap: max(1vw, 10px);
     }
 
     #icons a {
@@ -498,32 +502,44 @@ a:has(.card) {
     }
 }
 
-#below div form {
-    display: flex;
-    flex-direction: column;
-    gap: 1vw;
-}
+@media only screen and (max-width: 516px) {
+    footer {
+        background-color: #333;
+        color: white;
+        padding-left: 12.5vw;
+        padding-right: 12.5vw;
+        padding-top: 4vh;
+        padding-bottom: 6vh;
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+    }
 
-#email {
-    width: 100%;
-    padding-bottom: .5vh;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-}
+    footer p {
+        margin: 0;
+    }
 
-#submitform {
-    background-color: #f8c423;
-    border-radius: 10px;
-    padding: .5vh .75vw;
-    transition-property: background-color, font-weight;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    border: 4px solid transparent;
-    font-size: calc(0.2vw + 17.5px);
-    margin-top: 3vh;
-}
+    #icons {
+        display: flex;
+        gap: max(1vw, 10px);
+    }
 
-#submitform:hover {
-    background-color: #ffbf00;
-    font-weight: bold;
+    #icons a {
+        color: white;
+        transition: color 0.3s ease;
+    }
+
+    #icons a:hover {
+        color: #f8c423;
+    }
+
+    #footerlinks {
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    #footerlinks a {
+        color: white;
+    }
 }
