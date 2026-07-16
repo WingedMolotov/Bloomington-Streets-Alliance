@@ -34,24 +34,32 @@
         </div>
         <div id="below">
             <div>
-                <details>
-                    <summary>Let's Talk Bloomington</summary>
-                    <p><a href="https://letstalk.bloomingtonmn.gov/">Let's Talk Bloomington</a> is a city website where information on various projects is posted, including comprehensive planning and budget planning. Project pages often contain design drawings, events, project contacts, and opportunities for input like surveys and interactive maps.</p>
-                </details>
-                <details>
-                    <summary>Email City Council and staff</summary>
-                    <p>Every resident is represented by the Mayor, two at-large councilmembers, and one district councilmember. The easiest way to find your city council member and their contact information is through the <a href="https://www.bloomingtonmn.gov/cc/city-councilmembers-and-district-maps" target="_blank">city's website</a>. You can also include the <a href="mailto:councilsecretary@bloomingtonmn.gov">council secretary</a> in your correspondence.</p>
-                    <p>To contact city staff, it is best to start with listed project staff, if available. Otherwise, points of contact include the <a href="mailto:engineering@bloomingtonmn.gov" target="_blank">Engineering Division</a>, <a href="mailto:planning@bloomingtonmn.gov" target="_blank">Planning Division</a>, and City Engineer <a href="mailto:jlong@bloomingtonmn.gov" target="_blank">Julie Long</a>.</p>
-                </details>
-                <details>
-                    <summary>Write a Letter to the Editor</summary>
-                    <p>The Sun Current newspaper is widely read by Bloomington residents, including city staff and city council members. You can help raise awareness about our initiatives by <a href="https://www.hometownsource.com/site/forms/online_services/letter_editor_current/" target="_blank">submitting</a> a letter to the editor.</p>
-                </details>
-                <details>
-                    <summary>Speak at a City Council meeting</summary>
-                    <p>The Bloomington City Council holds listening sessions two or three times per month prior to their regular meetings, from 5:45 PM to 6:15 PM. Residents can sign up to speak for five minutes during these sessions on topics that do not have a public hearing on that evening's agenda.</p>
-                    <p>The City Council (and Planning Commission) also hear various matters related to transportation and land use, some of which have public hearings, where residents may provide testimony. On the <a href="https://www.bloomingtonmn.gov/cob/city-meetings-agendas-webcasts-and-documents" target="_blank">city's website</a>, you can find city council agendas, links to watch past and upcoming meetings, and dates of upcoming meetings and listening sessions.</p>
-                </details>
+                <div class="details">
+                    <div class="summary"><i class="fa-solid fa-angle-down" id="ltbtoggle"></i><span>Let's Talk Bloomington</span></div>
+                    <div id="ltbwrap">
+                        <p><a href="https://letstalk.bloomingtonmn.gov/">Let's Talk Bloomington</a> is a city website where information on various projects is posted, including comprehensive planning and budget planning. Project pages often contain design drawings, events, project contacts, and opportunities for input like surveys and interactive maps.</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="summary"><i class="fa-solid fa-angle-down" id="cctoggle"></i><span>Email City Council and staff</span></div>
+                    <div id="ccwrap">
+                        <p>Every resident is represented by the Mayor, two at-large councilmembers, and one district councilmember. The easiest way to find your city council member and their contact information is through the <a href="https://www.bloomingtonmn.gov/cc/city-councilmembers-and-district-maps" target="_blank">city's website</a>. You can also include the <a href="mailto:councilsecretary@bloomingtonmn.gov">council secretary</a> in your correspondence.</p>
+                        <p>To contact city staff, it is best to start with listed project staff, if available. Otherwise, points of contact include the <a href="mailto:engineering@bloomingtonmn.gov" target="_blank">Engineering Division</a>, <a href="mailto:planning@bloomingtonmn.gov" target="_blank">Planning Division</a>, and City Engineer <a href="mailto:jlong@bloomingtonmn.gov" target="_blank">Julie Long</a>.</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="summary"><i class="fa-solid fa-angle-down" id="sctoggle"></i><span>Write a Letter to the Editor</span></div>
+                    <div id="scwrap">
+                        <p>The Sun Current newspaper is widely read by Bloomington residents, including city staff and city council members. You can help raise awareness about our initiatives by <a href="https://www.hometownsource.com/site/forms/online_services/letter_editor_current/" target="_blank">submitting</a> a letter to the editor.</p>
+                    </div>
+                </div>
+                <div class="details last">
+                    <div class="summary"><i class="fa-solid fa-angle-down" id="lctoggle"></i><span>Speak at a City Council meeting</span></div>
+                    <div id="lcwrap">
+                        <p>The Bloomington City Council holds listening sessions two or three times per month prior to their regular meetings, from 5:45 PM to 6:15 PM. Residents can sign up to speak for five minutes during these sessions on topics that do not have a public hearing on that evening's agenda.</p>
+                        <p>The City Council (and Planning Commission) also hear various matters related to transportation and land use, some of which have public hearings, where residents may provide testimony. On the <a href="https://www.bloomingtonmn.gov/cob/city-meetings-agendas-webcasts-and-documents" target="_blank">city's website</a>, you can find city council agendas, links to watch past and upcoming meetings, and dates of upcoming meetings and listening sessions.</p>
+                    </div>
+                </div>
             </div>
             <img src="../images/Planning Commission.jpg" alt="A crowded Bloomington Planning Commission meeting. Attendees look on from the audience as city staff present to comissioners at the dais.">
         </div>
@@ -74,6 +82,7 @@
                 <a href="https://bsky.app/profile/bloomingtonstreets.bsky.social" target="_blank"><i class="fa-brands fa-bluesky"></i></a>
             </div>
         </footer>
+        <script src="../toggle details.js"></script>
         <script src="script.js"></script>
         <script src="../dynamic top.js"></script>
     </body>
