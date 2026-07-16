@@ -1,0 +1,72 @@
+const mobile = window.matchMedia("(max-width: 759px)");
+
+let activeCard = 0;
+let oldCard = 0;
+const cards = document.querySelectorAll('.card');
+const indicators = document.querySelectorAll('#indicator div');
+const prevButton = document.getElementById('prevCard');
+const nextButton = document.getElementById('nextCard');
+
+function updateCardDisplay() {
+    cards[oldCard].classList.remove('slideOut');
+    void cards[oldCard];
+    cards[oldCard].classList.add('slideOut');
+    cards[oldCard].parentElement.style.display = 'none';
+
+    cards[activeCard].classList.remove('slideIn');
+    void cards[activeCard];
+    cards[activeCard].classList.add('slideIn');
+    cards[activeCard].parentElement.style.display = 'flex';
+
+    indicators[oldCard].style.backgroundColor = '#000000';
+    indicators[activeCard].style.backgroundColor = '#f8c423';
+}
+
+function cardSlider() {
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].parentElement.style.display = 'none';
+    }
+    cards[activeCard].parentElement.style.display = 'flex';
+    indicators[oldCard].style.backgroundColor = '#000000';
+    indicators[activeCard].style.backgroundColor = '#f8c423';
+}
+
+function resetCards() {
+    const cards = document.querySelectorAll('.card');
+    const indicators = document.querySelectorAll('#indicator div');
+
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].classList.remove('slideIn', 'slideOut');
+        cards[i].parentElement.style.display = 'flex';
+    }
+}
+
+prevButton.addEventListener('click', () => {
+    oldCard = activeCard;
+    if (activeCard > 0) {
+        activeCard--;
+    } else {
+        activeCard = cards.length - 1;
+    }
+    updateCardDisplay();
+});
+nextButton.addEventListener('click', () => {
+    oldCard = activeCard;
+    if (activeCard < cards.length - 1) {
+        activeCard++;
+    } else {
+        activeCard = 0;
+    }
+    updateCardDisplay();
+});
+
+if (mobile.matches) {
+    cardSlider();
+}
+mobile.addEventListener('change', (e) => {
+    if (e.matches) {
+        cardSlider();
+    } else {
+        resetCards();
+    }
+});

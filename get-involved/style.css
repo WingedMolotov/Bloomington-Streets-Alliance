@@ -190,12 +190,19 @@ a {
     text-decoration: none;
 }
 
+a:has(.card) {
+    display: flex;
+}
+
 #content1 {
     padding-top: 6vh;
     padding-bottom: 6vh;
-    padding-left: 12.5vw;
-    padding-right: 12.5vw;
     background-color: #F4F0E6;
+}
+
+#content1 > div {
+    margin-left: 12.5vw;
+    width: 75vw;
 }
 
 #content1 h1 {
@@ -208,20 +215,122 @@ a {
     text-decoration: underline;
 }
 
-#cardholder {
-    display: flex;
-    flex-direction: row;
-    gap: 4vw;
+@media only screen and (min-width: 760px) {
+    #cardholder > div {
+        display: flex;
+        flex-direction: row;
+        gap: 4vw;
+    }
+
+    .card {
+        background-color: #faf8f2;
+        min-height: 55vh;
+        padding-bottom: 5vh;
+        border-radius: 20px;
+        border: 2px solid #f8c423;
+        width: calc(67vw/3);
+        overflow: hidden;
+        transition: box-shadow 0.6s ease;
+    }
+
+    #prevCard, #nextCard, #indicator {
+        display: none;
+    }
 }
 
-.card {
-    background-color: #faf8f2;
-    height: 55vh;
-    border-radius: 20px;
-    border: 2px solid #f8c423;
-    width: calc(67vw/3);
-    overflow: hidden;
-    transition: box-shadow 0.6s ease;
+@media only screen and (max-width: 759px) {
+    #cardholder {
+        display: flex;
+        flex-direction: row;
+        gap: 1vw;
+        align-items: center;
+        justify-content: center;
+        margin-top: max(4vh, 25px);
+    }
+
+    #cardholder > div {
+        position: relative;
+    }
+
+    .card {
+        background-color: #faf8f2;
+        min-height: 55vh;
+        padding-bottom: 5vh;
+        border-radius: 20px;
+        border: 2px solid #f8c423;
+        width: 60vw;
+        overflow: hidden;
+        transition: box-shadow 0.6s ease;
+    }
+    
+    @keyframes slideOut {
+        from {
+            transform: translateY(0) translateX(0);
+            opacity: 1;
+        }
+    
+        to {
+            transform: translateY(-20px) translateX(10px);
+            opacity: .67;
+        }
+    }
+    
+    @keyframes slideIn {
+        from {
+            transform: translateY(20px) translateX(-10px);
+            opacity: .67;
+        }
+    
+        to {
+            transform: translateY(0) translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    .slideOut {
+        animation: slideOut .3s ease;
+    }
+
+    .slideIn {
+        animation: slideIn .3s ease;
+    }
+    
+    #indicator {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        gap: 7px;
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: 2vh;
+    }
+    
+    #indicator div {
+        width: 8px;
+        height: 8px;
+        background-color: black;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+    }
+    
+    button {
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    
+    #prevCard,
+    #nextCard {
+        transform-origin: center;
+        height: min-content;
+        font-size: calc(0.75vw + 40px);
+        transition: transform 0.3s ease;
+    }
+    
+    #prevCard:hover,
+    #nextCard:hover {
+        transform: scale(1.2);
+    }
 }
 
 .card:hover {
@@ -233,12 +342,14 @@ a {
 }
 
 .card-text {
-    margin-top: 1vh;
-    padding: 1.25vh 1.25vw;
+    padding: max(1.25vh, 15px) max(1.25vw, 15px);
+    display: flex;
+    flex-direction: column;
+    gap: max(1vh, 10px);
 }
 
 .card-image {
-    height: 40%;
+    height: max(22vh, 150px);
     overflow: hidden;
 }
 
@@ -251,32 +362,55 @@ a {
 
 .card p {
     margin: 0;
-    margin-top: 1vh;
 }
 
 .dateline {
     font-size: calc(0.05vw + 12px);
 }
 
-#content2 {
-    padding-top: 6vh;
-    padding-bottom: 6vh;
-    padding-left: 12.5vw;
-    background-color: #FAF8F2;
-    display: flex;
-    flex-direction: row;
-    gap: 4vw;
-    height: min-content;
-    align-items: center;
+@media only screen and (min-width: 760px) {
+    #content2 {
+        padding-top: 6vh;
+        padding-bottom: 6vh;
+        padding-left: 12.5vw;
+        background-color: #FAF8F2;
+        display: flex;
+        flex-direction: row;
+        gap: 4vw;
+        height: min-content;
+        align-items: center;
+    }
+
+    #content2 div {
+        width: 35.5vw;
+    }
+
+    #content2 img {
+        width: 35.5vw;
+        height: min-content;
+    }
 }
 
-#content2 div {
-    width: 35.5vw;
-}
+@media only screen and (max-width: 759px) {
+    #content2 {
+        padding-top: 6vh;
+        padding-bottom: 6vh;
+        padding-left: 12.5vw;
+        background-color: #FAF8F2;
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+        height: min-content;
+    }
 
-#content2 img {
-    width: 35.5vw;
-    height: min-content;
+    #content2 div {
+        width: 75vw;
+    }
+
+    #content2 img {
+        width: 75vw;
+        height: min-content;
+    }
 }
 
 @media only screen and (min-width: 1417px) {

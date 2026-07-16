@@ -212,6 +212,9 @@ a {
         color: white;
         overflow: hidden;
         background-color: white;
+    }
+
+    #cards {
         margin-top: max(3vh, 17px);
     }
 }
@@ -224,10 +227,6 @@ a {
     align-items: center;
     position: relative;
     gap: 1vw;
-}
-
-.cards > a {
-    display: block;
 }
 
 .card:hover img {
