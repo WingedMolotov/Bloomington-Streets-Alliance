@@ -213,14 +213,14 @@ a {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        gap: 3vh;
+        gap: 2vh;
     }
 
     #open #imgcont {
         width: 45.5vw;
     }
 
-    #textual div {
+    #textual > div {
         background-color: #faeca0;
         padding: max(1vh, 15px) max(1vw, 15px);
         border-radius: 10px;
@@ -265,10 +265,6 @@ a {
         height: min-content;
     }
 
-    #img102ndcont {
-        order: -1;
-    }
-
     #open > #textual {
         width: 75vw;
         display: flex;
@@ -281,7 +277,7 @@ a {
         width: 75vw;
     }
 
-    #textual div {
+    #textual > div {
         background-color: #faeca0;
         padding: max(1vh, 15px) max(1vw, 15px);
         border-radius: 10px;
@@ -319,43 +315,44 @@ a {
     font-size: 95%;
 }
 
-#infoviewcont {
-    display: flex;
-    width: 75vw;
-    border-radius: 15px;
-    overflow-x: auto;
-    background-color: #faeca0;
-}
-
-#infoview {
-    display: flex;
-    padding: 2vh 2vw;
-    flex-direction: row;
-    align-items: center;
-    gap: max(1vw, 15px);
-    width: max-content;
-}
-
-.infobub {
+#below > div > div > ul {
     display: flex;
     flex-direction: column;
+    gap: 1vh;
+    padding: max(2vh, 20px) max(2vw, 20px);
+    padding-left: min(4vh, 40px);
+    background-color: #faeca0;
+    border-radius: 10px;
+}
+
+#below li {
+    font-size: calc(0.1vw + 15px);
+}
+
+#summary {
+    display: flex;
+    gap: .5vw;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    background-color: #f8c423;
-    border-radius: 50%;
-    padding: max(2vh, 20px);
-    width: max(9vw, 150px);
-    aspect-ratio: 1/1;
-    text-align: center;
-    flex-shrink: 0;
 }
 
-.infobub h3, .infobub p {
+#details > #summary > span {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    font-size: 90%;
+    font-size: calc(0.9*(0.1vw + 15px));
+}
+
+#details > div > p {
+    padding: 0;
     margin: 0;
+    margin-top: 1vh;
+    font-size: calc(0.9*(0.1vw + 15px));
 }
 
-.infobub p {
-    font-size: 95%;
+#details a {
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 @media only screen and (min-width: 1417px) {

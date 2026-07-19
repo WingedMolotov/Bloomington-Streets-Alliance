@@ -228,7 +228,7 @@ a:has(.card) {
 
     .card {
         background-color: #faf8f2;
-        min-height: 55vh;
+        min-height: 35vh;
         padding-bottom: 5vh;
         border-radius: 20px;
         border: 2px solid #f8c423;
@@ -258,7 +258,7 @@ a:has(.card) {
 
     .card {
         background-color: #faf8f2;
-        min-height: 55vh;
+        min-height: 35vh;
         padding-bottom: 5vh;
         border-radius: 20px;
         border: 2px solid #f8c423;

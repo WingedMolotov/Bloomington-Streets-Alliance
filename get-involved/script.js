@@ -2,6 +2,7 @@ const mobile = window.matchMedia("(max-width: 759px)");
 
 let activeCard = 0;
 let oldCard = 0;
+let firstTime = true;
 const cards = document.querySelectorAll('.card');
 const indicators = document.querySelectorAll('#indicator div');
 const prevButton = document.getElementById('prevCard');
@@ -42,6 +43,7 @@ function resetCards() {
 }
 
 prevButton.addEventListener('click', () => {
+    firstTime = false;
     oldCard = activeCard;
     if (activeCard > 0) {
         activeCard--;
@@ -51,6 +53,7 @@ prevButton.addEventListener('click', () => {
     updateCardDisplay();
 });
 nextButton.addEventListener('click', () => {
+    firstTime = false;
     oldCard = activeCard;
     if (activeCard < cards.length - 1) {
         activeCard++;
@@ -62,7 +65,20 @@ nextButton.addEventListener('click', () => {
 
 if (mobile.matches) {
     cardSlider();
+    window.addEventListener('load', () => {
+        setInterval(() => {
+            if (!firstTime) { return; }
+            oldCard = activeCard;
+            if (activeCard < cards.length - 1) {
+                activeCard++;
+            } else {
+                activeCard = 0;
+            }
+            updateCardDisplay();
+        }, 5000);
+    });
 }
+
 mobile.addEventListener('change', (e) => {
     if (e.matches) {
         cardSlider();

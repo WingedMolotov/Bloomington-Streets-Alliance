@@ -1,5 +1,6 @@
 let activeCard = 0;
 let oldCard = 0;
+let firstTime = true;
 const cards = document.querySelectorAll('.card');
 const indicators = document.querySelectorAll('#indicator div');
 const prevButton = document.getElementById('prevCard');
@@ -28,6 +29,7 @@ indicators[oldCard].style.backgroundColor = '#ffffff';
 indicators[activeCard].style.backgroundColor = '#f8c423';
 
 prevButton.addEventListener('click', () => { 
+    firstTime = false;
     oldCard = activeCard;
     if (activeCard > 0) {
         activeCard--;
@@ -37,6 +39,7 @@ prevButton.addEventListener('click', () => {
     updateCardDisplay();
 });
 nextButton.addEventListener('click', () => { 
+    firstTime = false;
     oldCard = activeCard;
     if (activeCard < cards.length - 1) {
         activeCard++;
@@ -44,4 +47,17 @@ nextButton.addEventListener('click', () => {
         activeCard = 0;
     }
     updateCardDisplay();
+});
+
+window.addEventListener('load', () => {
+    setInterval(() => {
+        if (!firstTime) { return; }
+        oldCard = activeCard;
+        if (activeCard < cards.length - 1) {
+            activeCard++;
+        } else {
+            activeCard = 0;
+        }
+        updateCardDisplay();
+    }, 5000);
 });

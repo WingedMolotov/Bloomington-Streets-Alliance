@@ -1,0 +1,1 @@
+toggleDetails(document.getElementById('sampletoggle'), document.getElementById('samplewrap'), false);

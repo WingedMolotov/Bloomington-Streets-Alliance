@@ -181,6 +181,7 @@ a {
         margin-top: 2vh;
         display: flex;
         flex-direction: row;
+        gap: 1vw;
     }
 
     .card {

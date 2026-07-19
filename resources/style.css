@@ -244,11 +244,12 @@ a {
 #heading {
     display: flex;
     flex-direction: row;
-    gap: 1vw;
+    gap: .75vw;
+    align-items: center;
 }
 
 #heading i {
-    font-size: calc(0.9vw + 25px);
+    font-size: calc(0.8vw + 20px);
 }
 
 #content2 {
@@ -312,6 +313,7 @@ a {
     display: flex;
     gap: .5vw;
     flex-direction: row;
+    align-items: center;
 }
 
 #details {
