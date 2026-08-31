@@ -481,3 +481,7 @@ a {
         color: white;
     }
 }
+
+.strikethrough {
+    text-decoration: line-through;
+}
