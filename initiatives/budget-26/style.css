@@ -485,3 +485,7 @@ a {
 .strikethrough {
     text-decoration: line-through;
 }
+
+.newmtg {
+    color: #D40000;
+}
